@@ -1,0 +1,18 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (User.IsInRole("Admin") || User.IsInRole("SuperAdmin"))
+{
+    <h1>Sos admin o super admin</h1>
+}
+@if (User.IsInRole("User"))
+{
+    <h1>Sos common user</h1>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Felicitaciones Estas Logeado</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
